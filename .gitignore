@@ -1,0 +1,14 @@
+# Virtual environment
+venv/
+env/
+
+# Django specific
+*.pyc
+__pycache__/
+media/          # User uploaded files 
+staticfiles/    # Generated static files
+
+# Database & Sensitive files
+db.sqlite3
+.env
+.DS_Store

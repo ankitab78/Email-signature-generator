@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Professional Email Signature Generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+
+    <style>
+      
+        body {
+            margin: 0;
+            padding: 40px 20px;
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background-color: #d3d3d3ff; /* Light Grey Base */
+            background-image: 
+                url("");
+            background-size: 80px 80px;
+            background-attachment: fixed;
+        }
+
+        /* 2. CONTENT WRAPPER */
+        .content-wrapper {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Slightly lighter shadow for light background */
+            padding: 40px;
+            width: 100%;
+            max-width: 700px; 
+            transition: all 0.3s ease;
+        }
+
+        .content-wrapper:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 35px;
+            font-weight: 700;
+            color: #343a40; 
+            font-size: 2rem;
+            text-transform: uppercase;
+        }
+
+        /* 3. FORM ELEMENTS */
+        label {
+            font-weight: 600;
+            color: #495057;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="url"],
+        input[type="tel"],
+        input[type="file"] {
+            border-radius: 8px !important;
+            padding: 12px 14px;
+            font-size: 15px;
+            border: 1px solid #ced4da;
+        }
+
+        .btn-primary {
+            width: 100%;
+            border-radius: 8px;
+            padding: 14px;
+            font-size: 17px;
+            font-weight: 600;
+            background-color: #007bff;
+            border: none;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            transform: translateY(-1px);
+        }
+        
+        /* 4. SIGNATURE CARD STYLING (For Result Page) */
+        
+        .signature-card-container {
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+
+        .signature-card {
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: #ffffff; /* White background */
+            width: 100%; /* FULL WIDTH */
+            max-width: 600px;
+            margin-top: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            
+            display: flex; 
+            align-items: center;
+            text-align: left;
+        }
+        
+        .signature-details {
+            padding-left: 20px;
+        }
+        
+        .signature-details p {
+            margin: 2px 0;
+            font-size: 14px;
+            color: #343a40;
+        }
+        
+        .signature-details strong {
+            display: block;
+            font-size: 18px;
+            font-weight: 600;
+            color: #007bff;
+            margin-bottom: 5px;
+        }
+        
+        .signature-details a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        
+        .signature-details a:hover {
+            text-decoration: underline;
+        }
+
+        .profile-image-sig {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 2px solid #007bff;
+            object-fit: cover;
+        }
+
+        /* 5. RESPONSIVE ADJUSTMENTS */
+        @media (max-width: 768px) {
+            body {
+                padding: 20px;
+            }
+            .content-wrapper {
+                padding: 25px;
+                max-width: 95%;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+            .signature-card {
+                flex-direction: column; 
+                text-align: center;
+            }
+            .signature-details {
+                padding-left: 0;
+                padding-top: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .content-wrapper {
+                padding: 20px;
+                border-radius: 15px;
+            }
+            h1 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content-wrapper">
+        {% block content %}
+        {% endblock content %} 
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
